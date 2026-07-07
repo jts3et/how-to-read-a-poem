@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Board — How to Read a Poem</title>
+<link rel="stylesheet" href="./style.css">
+</head><body>
+<div class="top">
+  <span class="brand">How to Read a Poem</span>
+  <a class="btn" href="./index.html">Overview</a>
+  <a class="btn" href="./sweeney.html">Sweeney</a>
+  <a class="btn" href="./reading-poetry.html">The point</a>
+  <a class="btn" href="./prosody.html">Prosody</a>
+  <a class="btn" href="./scansion.html">Scansion</a>
+  <a class="btn" href="./wasteland.html">The Waste Land</a>
+  <a class="btn active" href="./board.html">Board</a>
+  <button class="btn" id="presentBtn">Present</button>
+</div>
+<div class="wrap">
+<h1><span class="livedot"></span>The room's scansions</h1>
+<p class="lead">Project this. Every <b>Submit</b> from the <a href="./scansion.html">scansion page</a> lands here live — the variation and the common patterns, in real time.</p>
+
+<div class="boardctl">
+  <label>Line: <select id="boardLine"></select></label>
+  <label>Room: <input id="roomInput" maxlength="40"></label>
+  <button class="btn" id="refreshBtn">Refresh</button>
+  <span><b id="bcount">0</b> submissions</span>
+</div>
+
+<div id="boardViz"></div>
+
+<h2>Meter named</h2>
+<div id="meterBox"></div>
+
+<div class="note">Reading the display: a tall bar over a syllable means most of the room heard it as stressed; a split bar is a genuine dispute worth pausing on. The gap bars show where people put the feet. Updates every few seconds.</div>
+</div>
+<script src="./lines.js"></script>
+<script src="./board.js"></script>
+<script src="./present.js"></script>
+</body></html>
