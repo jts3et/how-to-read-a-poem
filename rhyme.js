@@ -7,8 +7,8 @@
   function color(l) { var i = l.toUpperCase().charCodeAt(0) - 65; return COLORS[((i % COLORS.length) + COLORS.length) % COLORS.length]; }
   function div(c, t) { var e = document.createElement("div"); if (c) e.className = c; if (t != null) e.textContent = t; return e; }
   function renderRhyme(el, spec) {
-    var box = div("rhyme");
-    if (spec.cap) box.appendChild(div("rcap", spec.cap));
+    el.classList.add("rhyme");
+    if (spec.cap) el.appendChild(div("rcap", spec.cap));
     var groups = spec.scheme.trim().split(/\s+/), n = 0;
     groups.forEach(function (g, gi) {
       g.split("").forEach(function (ltr, li) {
@@ -17,11 +17,10 @@
         var b = div("rbadge", ltr.toUpperCase()); b.style.background = color(ltr);
         row.appendChild(b); row.appendChild(div("rline"));
         if (spec.marks && spec.marks[n]) row.appendChild(div("rlabel", spec.marks[n]));
-        box.appendChild(row);
+        el.appendChild(row);
       });
     });
-    if (spec.meta) box.appendChild(div("rmeta", spec.meta));
-    el.appendChild(box);
+    if (spec.meta) el.appendChild(div("rmeta", spec.meta));
   }
   window.renderRhyme = renderRhyme;
 })();

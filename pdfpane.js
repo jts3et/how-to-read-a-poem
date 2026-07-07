@@ -2,7 +2,6 @@
 // docks on the right. Any page loads it; pages can auto-open one via <body data-pdf="id">.
 (function () {
   var PDFS = {
-    sweeney: { label: "Sweeney Agonistes", src: "./pdfs/sweeney-agonistes.pdf" },
     wasteland: { label: "The Waste Land", src: "./pdfs/the-waste-land.pdf" },
     aistudy: { label: "AI-poetry study (Porter & Machery)", src: "./pdfs/ai-poetry-study.pdf" },
   };
@@ -73,7 +72,7 @@
       var b = el("button", "btn"); b.textContent = "⧉ Reading pane"; b.title = "Open the PDF beside the page";
       b.addEventListener("click", function () {
         if (document.body.classList.contains("haspane")) close();
-        else open(curId || localStorage.getItem(CKEY) || "sweeney");
+        else open(curId || localStorage.getItem(CKEY) || "wasteland");
       });
       top.appendChild(b);
     }

@@ -5,7 +5,6 @@
 </head><body>
 <div class="top">
   <a class="brand" href="./index.html">How to Read a Poem</a>
-  <a class="btn" href="./sweeney.html">Sweeney</a>
   <a class="btn" href="./versification.html">Versification</a>
   <a class="btn" href="./scansion.html">Scansion</a>
   <a class="btn active" href="./breath.html">Breath</a>
@@ -49,8 +48,30 @@
 </svg>
 </div>
 
+<h2>The full inventory of feet</h2>
+<p>Every ordered run of longs and shorts up to four syllables has a Greek name — 4 + 8 + 16 = 28 in all. Only a handful ever founded a metrical tradition; the rest are a combinatorial exercise.</p>
+<div class="tw"><table><thead><tr><th>Syllables</th><th>The feet (name · pattern)</th></tr></thead><tbody>
+<tr><th>2 — four</th><td><span class="pat">∪∪</span> pyrrhic · <span class="pat">∪—</span> iamb · <span class="pat">—∪</span> trochee · <span class="pat">——</span> spondee</td></tr>
+<tr><th>3 — eight</th><td><span class="pat">∪∪∪</span> tribrach · <span class="pat">∪∪—</span> anapest · <span class="pat">—∪∪</span> dactyl · <span class="pat">∪—∪</span> amphibrach · <span class="pat">∪——</span> bacchius · <span class="pat">——∪</span> antibacchius · <span class="pat">—∪—</span> cretic · <span class="pat">———</span> molossus</td></tr>
+<tr><th>4 — sixteen</th><td><span class="pat">—∪∪—</span> choriamb · <span class="pat">∪——∪</span> antispast · <span class="pat">∪∪——</span> ionic a minore · <span class="pat">——∪∪</span> ionic a majore · the four paeons (<span class="pat">—∪∪∪</span> …) · the four epitrites (<span class="pat">∪———</span> …) · <span class="pat">∪—∪—</span> diiamb · <span class="pat">—∪—∪</span> ditrochee · <span class="pat">∪∪∪∪</span> proceleusmatic · <span class="pat">————</span> dispondee</td></tr>
+</tbody></table></div>
+
 <h2>Building longer feet</h2>
 <p>Two moves make every longer foot. <b>Composition</b> joins two feet at a shared syllable (the tail of one is the head of the next, and they collapse into one). <b>Juxtaposition</b> simply sets two feet side by side, with a seam between them. Composing carries a single breath further along the cycle; juxtaposing places one breath beside the next.</p>
+<div class="scanbox">
+  <div class="oprow">
+    <span class="opfoot">—∪<small>trochee</small></span><span class="opsym">∘</span>
+    <span class="opfoot">∪∪<small>pyrrhic</small></span><span class="opsym">=</span>
+    <span class="opfoot res">—∪∪<small>dactyl</small></span>
+    <span class="opnote"><b>composition</b> — the shared short collapses; one breath carried further.</span>
+  </div>
+  <div class="oprow">
+    <span class="opfoot">∪—<small>iamb</small></span><span class="opsym">×</span>
+    <span class="opfoot">∪—<small>iamb</small></span><span class="opsym">=</span>
+    <span class="opfoot res">∪—∪—<small>iambic metron</small></span>
+    <span class="opnote"><b>juxtaposition</b> — set side by side; two breaths, a seam between.</span>
+  </div>
+</div>
 
 <h2>The selection rule</h2>
 <p>The productive feet — the ones that actually founded metrical traditions — are exactly the <b>forward segments</b> of the cycle: a walk that starts at some phase and moves onward in order (fall → dwell-low → rise → dwell-high), skipping only the pauses. The unproductive feet run backward, or stall.</p>
@@ -74,6 +95,30 @@
 <tr><th>Hovering</th><td>choriambic, cretic — head and tail both long; the breath returns where it left.</td></tr>
 </tbody></table></div>
 <p>The rising and falling metra build lines by juxtaposition alone: the mismatch between a unit’s end and the next unit’s beginning makes the pulse. The hovering metra (choriamb, cretic) close on the same note they open, so they leave no seam, and lines built from them need a launching foot and a landing foot to supply the articulation the hovering breath cannot. That framing requirement, and the freedom of the opening “base” of the Aeolic line, both follow from the two operations rather than being stipulated.</p>
+
+<h2>The eleven metra</h2>
+<p>Composition and juxtaposition build the repeating units of Greek verse. Grouped by family, with the pattern each traces:</p>
+<div class="tw"><table><thead><tr><th>Metron</th><th>Pattern</th><th>Family</th></tr></thead><tbody>
+<tr><td>iambic</td><td class="pat">∪—∪—</td><td class="pos">rising</td></tr>
+<tr><td>anapestic</td><td class="pat">∪∪—∪∪—</td><td class="pos">rising</td></tr>
+<tr><td>ionic a minore</td><td class="pat">∪∪——</td><td class="pos">rising</td></tr>
+<tr><td>dochmiac</td><td class="pat">∪——∪—</td><td class="pos">rising</td></tr>
+<tr><td>trochaic</td><td class="pat">—∪—∪</td><td>falling</td></tr>
+<tr><td>paeonic</td><td class="pat">—∪∪∪</td><td>falling</td></tr>
+<tr><td>ionic a majore</td><td class="pat">——∪∪</td><td>falling</td></tr>
+<tr><td>choriambic</td><td class="pat">—∪∪—</td><td>hovering</td></tr>
+<tr><td>cretic</td><td class="pat">—∪—</td><td>hovering</td></tr>
+</tbody></table></div>
+
+<h2>The meters</h2>
+<p>Metra repeat into lines; a meter names the foot and the count. The same body runs them all.</p>
+<div class="tw"><table><thead><tr><th>Meter</th><th>Metric pattern</th><th>Where it lives</th></tr></thead><tbody>
+<tr><td>iambic pentameter</td><td class="pat">∪— ∪— ∪— ∪— ∪—</td><td>the English sonnet, blank verse</td></tr>
+<tr><td>iambic trimeter</td><td class="pat">∪—∪— ∪—∪— ∪—∪—</td><td>Greek tragic dialogue</td></tr>
+<tr><td>dactylic hexameter</td><td class="pat">—∪∪ —∪∪ —∪∪ —∪∪ —∪∪ ——</td><td>epic — Homer, Virgil</td></tr>
+<tr><td>trochaic tetrameter</td><td class="pat">—∪ —∪ —∪ —∪</td><td>incantation — Blake’s <em>Tyger</em></td></tr>
+<tr><td>anapestic tetrameter</td><td class="pat">∪∪— ∪∪— ∪∪— ∪∪—</td><td>the galloping line</td></tr>
+</tbody></table></div>
 
 <h2>The limp</h2>
 <p>The <b>scazon</b>, or “limping” line, ends an iambic verse with a spondee instead of an iamb: the breath reaches the long but does not land, it stalls. The Greeks heard this as a physical defect, a verse that limps. A line can limp only against a proper gait, and the proper gait is forward motion through the cycle: departure, traversal, arrival. That the disruption was felt as bodily disfigurement, long before any theorist named the rule, is the evidence that the rule was respiratory before it was ever formal.</p>
