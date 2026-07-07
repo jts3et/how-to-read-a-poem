@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scan the examples — authoring</title>
+<link rel="stylesheet" href="./style.css?v=1783450006">
+</head><body>
+<div class="top">
+  <a class="brand" href="./index.html">How to Read a Poem</a>
+  <a class="btn" href="./versification.html">Versification</a>
+  <a class="btn" href="./scansion.html">Scansion</a>
+  <a class="btn" href="./breath.html">Breath</a>
+  <a class="btn" href="./glossary.html">Glossary</a>
+  <a class="btn" href="./wasteland.html">The Waste Land</a>
+  <a class="btn" href="./board.html">Board</a>
+</div>
+<div class="wrap">
+<p class="eyebrow">Author tool — not classroom-facing</p>
+<h1>Scan the examples</h1>
+<p class="lead">Every accentual-syllabic example, ready to scan. Click a syllable to toggle stress (´); click a gap to drop or lift a foot boundary. When every poem is done, <b>Export</b> and paste the block back to me — I’ll wire each scansion beside its rhyme analysis on the Versification page.</p>
+<div class="exportbar">
+  <button class="btn" id="exportall">⬇ Export all scansions</button>
+  <span class="src" style="margin:0">Marks left → right: slack (blank), stress (´). Boundaries are the accent bars between syllables.</span>
+</div>
+<textarea id="authorout" placeholder="the export block appears here (also copied to your clipboard)"></textarea>
+<div id="author"></div>
+</div>
+<script src="./versedata.js?v=1783450006"></script>
+<script src="./scanauthor.js?v=1783450006"></script>
+</body></html>

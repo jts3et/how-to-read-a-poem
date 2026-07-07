@@ -43,6 +43,19 @@ a{color:var(--accent);text-underline-offset:2px}
 .parallel{display:flex;gap:16px;align-items:stretch;margin:0 0 10px}
 .parallel .verse{flex:1 1 0;min-width:0;margin:0;font-size:14px;line-height:1.7}
 @media (max-width:640px){.parallel{flex-direction:column}}
+/* aligned parallel: line i of both columns share one grid row (paralign.js) */
+.palign{display:grid;grid-template-columns:1fr 1fr;column-gap:18px;align-items:start;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;
+  box-shadow:var(--shadow);margin:0 0 12px}
+.palign .pa-h{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);
+  font-family:ui-monospace,Menlo,monospace;min-height:4px;margin:0 0 6px}
+.palign .pa-cell{font-size:14px;line-height:1.7;min-width:0}
+.palign .pa-txt{padding-left:1.35em;text-indent:-1.35em}
+.palign .pa-el{overflow-x:auto}
+.palign .pa-acell{color:var(--muted);font-size:12.5px;margin-top:7px}
+.palign .al-line{font-size:13.5px}
+.palign .sline{font-size:13px}
+@media (max-width:640px){.palign{grid-template-columns:1fr;row-gap:2px}.palign .pa-h:empty{display:none}}
 /* translations share the original's module styling; distinguished only by the label */
 .parallel .verse.trans .trlabel{color:var(--accent)}
 .trlabel{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:block;margin:0 0 6px;font-family:ui-monospace,Menlo,monospace}
@@ -126,6 +139,12 @@ td.pos,.pos{color:var(--ok);font-weight:600} td.neg,.neg{color:var(--muted)}
 .tile-primary{background:var(--accent-soft);border-color:var(--accent-soft)}
 .tile-primary .ttitle{color:var(--accent)}
 .tile-wide{max-width:none}
+/* scansion authoring viewer */
+.exportbar{position:sticky;top:52px;z-index:4;display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+  background:var(--bg);padding:10px 0;margin:0 0 8px;border-bottom:1px solid var(--line)}
+.exportbar .btn{background:var(--accent-soft);color:var(--accent);border-color:var(--accent-soft);font-weight:600}
+#authorout{display:block;width:100%;min-height:66px;font:0.78em ui-monospace,Menlo,monospace;
+  border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--panel);margin:0 0 18px}
 /* full-page centered PDF (Waste Land) */
 .pdfstage{padding:16px;display:flex;justify-content:center}
 .pdfbig{width:100%;max-width:1000px;height:calc(100vh - 84px);border:1px solid var(--line);
@@ -133,7 +152,7 @@ td.pos,.pos{color:var(--ok);font-weight:600} td.neg,.neg{color:var(--muted)}
 @media (max-width:640px){.pdfbig{height:calc(100vh - 118px)}}
 
 /* verse + PDF */
-.verse{white-space:pre;overflow-x:auto;font-size:15px;line-height:1.7;background:var(--panel);
+.verse{white-space:pre-wrap;font-size:14px;line-height:1.7;background:var(--panel);
   border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:0 0 14px;box-shadow:var(--shadow)}
 .pdfframe{width:100%;height:78vh;min-height:520px;border:1px solid var(--line);
   border-radius:10px;background:#fff}
@@ -269,7 +288,7 @@ body.author textarea#keyout{display:block;width:100%;min-height:120px;font:0.8em
 .parallel .poem{flex:1 1 0;min-width:0;margin:0}
 .parallel .allit .al-line{font-size:13.5px}
 .parallel .allit .al-w .wt{font-size:13.5px}
-.al-line{display:flex;align-items:flex-end;white-space:nowrap;line-height:1.15;margin:0 0 11px;font-size:15px;width:max-content}
+.al-line{display:flex;align-items:flex-end;white-space:nowrap;line-height:1.1;margin:0 0 3px;font-size:15px;width:max-content}
 .al-line:last-of-type{margin-bottom:0}
 .al-half{display:flex;align-items:flex-end}
 .al-caes{color:var(--muted);margin:0 13px;align-self:center;font-size:15px}
