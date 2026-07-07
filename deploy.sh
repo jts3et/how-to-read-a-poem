@@ -6,6 +6,11 @@ OWNER="jts3et"
 REPO="how-to-read-a-poem"
 MSG="${1:-Update workshop site}"
 
+# cache-bust: stamp a fresh version onto every local css/js reference so browsers
+# (and the workshop laptop) always fetch the current file, never a cached one.
+STAMP=$(date +%s)
+perl -pi -e "s/((?:href|src)=\"\.\/[^\"?]+\.(?:css|js))(?:\?v=\d+)?\"/\$1?v=$STAMP\"/g" *.html
+
 git init -q 2>/dev/null || true
 git add -A
 git commit -q -m "$MSG" || echo "(nothing to commit)"

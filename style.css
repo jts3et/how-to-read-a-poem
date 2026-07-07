@@ -131,16 +131,25 @@ body.present .participant-note{opacity:.5}
   font-size:14px;color:var(--muted)}
 .toolbar input{font:inherit;font-size:14px;padding:6px 9px;border:1px solid var(--line);border-radius:8px}
 .scanline{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:0 0 16px}
+.scanbody{display:flex;gap:18px;align-items:flex-start;margin:8px 0 0}
+.scanread{flex:0 0 34%;background:var(--highlight);border:1px solid var(--line);border-radius:10px;
+  padding:11px 14px;font-family:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif}
+.scanread .rdlabel{font-size:9.5px;text-transform:uppercase;letter-spacing:.14em;
+  color:var(--muted);font-family:ui-monospace,Menlo,monospace;margin:0 0 7px}
+.scanread .rdline{font-size:14.5px;line-height:1.5}
+.scanwork{flex:1 1 0;min-width:0}
+.parallel .scanbox{flex:1 1 0;min-width:0;margin:0}
+@media (max-width:760px){.scanbody{flex-direction:column}.scanread{flex:1 1 auto;width:100%}}
 .scanline.locked{opacity:.75}
 .scanhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 10px}
 .scanpoet{font-size:13px;color:var(--muted)}
 .tag.tsub{background:#e7eef0;color:var(--slack)} .tag.tchk{background:#f0e7df;color:var(--stress)}
-.scanrow{display:flex;flex-wrap:wrap;align-items:stretch;
-  font-family:ui-monospace,Menlo,monospace;margin:0 0 12px}
+.scanrow{display:flex;flex-wrap:wrap;align-items:flex-end;
+  font-family:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif;margin:0 0 2px}
 .syl{display:inline-flex;flex-direction:column;align-items:center;cursor:pointer;
-  padding:2px 2px;border-radius:6px;user-select:none}
+  padding:1px 2px;border-radius:6px;user-select:none}
 .syl:hover{background:var(--accent-soft)}
-.syl .mark{font-size:15px;height:16px;line-height:16px;color:var(--muted);font-weight:700}
+.syl .mark{font-size:15px;height:15px;line-height:15px;color:var(--muted);font-weight:700}
 .syl.stress .mark{color:var(--stress)}
 .syl .txt{font-size:17px}
 .syl.stress .txt{font-weight:700;color:var(--stress)}

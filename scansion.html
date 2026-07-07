@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Scansion — How to Read a Poem</title>
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style.css?v=1783447935">
 </head><body>
 <div class="top">
   <a class="brand" href="./index.html">How to Read a Poem</a>
@@ -34,8 +34,24 @@
 </ol>
 
 <h2>A whole sonnet, scanned</h2>
-<p>The marks are the same as the tool below — <b>u</b> slack, <b>S</b> stress, above each syllable; the feet divide by rule.</p>
-<div class="scanbox" id="scan-sonnet"></div>
+<p>An accent <b>´</b> marks each stressed syllable (and the stress falls into accent colour); the feet divide by rule, and a word split across a boundary is hyphenated. The plain poem sits beside it, to read.</p>
+<div class="parallel">
+  <div class="verse">Shall I compare thee to a summer’s day?
+Thou art more lovely and more temperate:
+Rough winds do shake the darling buds of May,
+And summer’s lease hath all too short a date;
+Sometime too hot the eye of heaven shines,
+And often is his gold complexion dimm’d;
+And every fair from fair sometime declines,
+By chance or nature’s changing course untrimm’d;
+But thy eternal summer shall not fade,
+Nor lose possession of that fair thou ow’st;
+Nor shall Death brag thou wander’st in his shade,
+When in eternal lines to time thou grow’st:
+   So long as men can breathe or eyes can see,
+   So long lives this, and this gives life to thee.</div>
+  <div class="scanbox" id="scan-sonnet"></div>
+</div>
 <p class="src">Iambic pentameter throughout, with a spondee opening line 3 (<em>rough winds</em>) and a trochaic inversion opening line 5 (<em>some-time</em>); <em>every</em> and <em>temperate</em> elide.</p>
 
 <h2>Scan for yourself</h2>
@@ -52,7 +68,7 @@
 
 <div class="note">Method after the <code>prosodic-scansion</code> skill: six feet, six steps, be meek to the meter.</div>
 </div>
-<script src="./scanview.js"></script>
+<script src="./scanview.js?v=1783447935"></script>
 <script>
 var U="u",S="S";
 renderScan(document.getElementById("scan-sonnet"), { lines: [
@@ -72,8 +88,8 @@ renderScan(document.getElementById("scan-sonnet"), { lines: [
  [[["So",U],["long",S]],[["lives",U],["this,",S]],[["and",U],["this",S]],[["gives",U],["life",S]],[["to",U],["thee.",S]]],
 ]});
 </script>
-<script src="./lines.js"></script>
-<script src="./scanpractice.js"></script>
-<script src="./pdfpane.js"></script>
-<script src="./gate.js"></script>
+<script src="./lines.js?v=1783447935"></script>
+<script src="./scanpractice.js?v=1783447935"></script>
+<script src="./pdfpane.js?v=1783447935"></script>
+<script src="./gate.js?v=1783447935"></script>
 </body></html>

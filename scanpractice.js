@@ -59,6 +59,17 @@
     };
   }
 
+  // reconstruct the plain, readable line from its syllables (space at word breaks,
+  // no space after a hyphenated compound)
+  function readable(line) {
+    var s = "";
+    for (var i = 0; i < line.syl.length; i++) {
+      if (i > 0 && line.sp[i] && !/[-‐‑]$/.test(line.syl[i - 1])) s += " ";
+      s += line.syl[i];
+    }
+    return s;
+  }
+
   function buildPoem(poem) {
     var box = el("div", "scanline");
     var head = el("div", "scanhead");
@@ -66,14 +77,21 @@
     head.appendChild(el("span", "tag " + (poem.mode === "submit" ? "tsub" : "tchk"), poem.mode === "submit" ? "Submit" : "Check"));
     box.appendChild(head);
 
+    var body = el("div", "scanbody");
+    var read = el("div", "scanread");
+    read.appendChild(el("div", "rdlabel", "Read"));
+    poem.lines.forEach(function (ln) { read.appendChild(el("div", "rdline", readable(ln))); });
+    var work = el("div", "scanwork");
+    body.appendChild(read); body.appendChild(work); box.appendChild(body);
+
     var rows = poem.lines.map(function (ln) { return buildRow(ln, function () { fx.textContent = ""; fx.className = "fx"; rows.forEach(function (r) { r.clearFx(); }); }); });
-    rows.forEach(function (r) { box.appendChild(r.row); });
+    rows.forEach(function (r) { work.appendChild(r.row); });
 
     var ctl = el("div", "ctlrow");
     var meter = meterCtl(), form = formCtl(), actions = el("span", "actions");
     ctl.appendChild(meter); ctl.appendChild(form); ctl.appendChild(actions);
-    box.appendChild(ctl);
-    var fx = el("div", "fx"); box.appendChild(fx);
+    work.appendChild(ctl);
+    var fx = el("div", "fx"); work.appendChild(fx);
 
     if (poem.mode === "submit") {
       var sub = el("button", "btn", "Submit to the board");
