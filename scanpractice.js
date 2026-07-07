@@ -32,10 +32,11 @@
           bounds[idx] = !bounds[idx]; gg.classList.toggle("on", bounds[idx]); onEdit(); }); })(i, g);
         row.appendChild(g); gaps[i] = g;
       }
-      var s = el("span", "syl"), mk = el("span", "mark", "u"), tx = el("span", "txt", line.syl[i]);
+      var hy = (i + 1 < n && !line.sp[i + 1]) ? "‑" : "";   // word split at the next boundary
+      var s = el("span", "syl"), mk = el("span", "mark", ""), tx = el("span", "txt", line.syl[i] + hy);
       s.appendChild(mk); s.appendChild(tx);
       (function (idx, sEl, mkEl) { sEl.addEventListener("click", function () {
-        st[idx] = st[idx] === "u" ? "S" : "u"; mkEl.textContent = st[idx];
+        st[idx] = st[idx] === "u" ? "S" : "u"; mkEl.textContent = st[idx] === "S" ? "´" : "";
         sEl.classList.toggle("stress", st[idx] === "S"); onEdit(); }); })(i, s, mk);
       row.appendChild(s); syls[i] = s;
     }
@@ -44,11 +45,11 @@
       stress: function () { return st.join(""); },
       feet: function () { var a = []; for (var k = 1; k < n; k++) if (bounds[k]) a.push(k); return a.join(","); },
       setAnswer: function (ans) {
-        for (var i = 0; i < n; i++) { st[i] = ans.stress[i]; syls[i].querySelector(".mark").textContent = ans.stress[i]; syls[i].classList.toggle("stress", ans.stress[i] === "S"); }
+        for (var i = 0; i < n; i++) { st[i] = ans.stress[i]; syls[i].querySelector(".mark").textContent = ans.stress[i] === "S" ? "´" : ""; syls[i].classList.toggle("stress", ans.stress[i] === "S"); }
         for (var k = 1; k < n; k++) { bounds[k] = ans.feet.indexOf(k) >= 0; if (gaps[k]) gaps[k].classList.toggle("on", bounds[k]); }
       },
       reset: function () {
-        for (var i = 0; i < n; i++) { st[i] = "u"; syls[i].querySelector(".mark").textContent = "u"; syls[i].classList.remove("stress", "ok", "diff", "flex"); }
+        for (var i = 0; i < n; i++) { st[i] = "u"; syls[i].querySelector(".mark").textContent = ""; syls[i].classList.remove("stress", "ok", "diff", "flex"); }
         for (var k = 1; k < n; k++) { bounds[k] = false; if (gaps[k]) { gaps[k].classList.remove("on", "gok", "gmiss", "gextra"); } }
       },
       clearFx: function () {

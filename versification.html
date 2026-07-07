@@ -430,12 +430,12 @@ Petals on a wet, black bough.
 renderScan(document.getElementById("scan-aeneid"), {
   attr: "Virgil, Aeneid 1.1–2 scanned — dactylic hexameter (— long, ∪ short)",
   lines: [
-    [ [["Ar","—"],["ma","∪"],["vi","∪"]], [["rum","—"],["que","∪"],["ca","∪"]],
-      [["nō","—"],["Trō","—"]], [["iae","—"],["quī","—"]],
-      [["prī","—"],["mus","∪"],["ab","∪"]], [["ō","—"],["rīs","—"]] ],
-    [ [["Ī","—"],["ta","∪"],["li","∪"]], [["am","—"],["fā","—"]],
-      [["tō","—"],["pro","∪"],["fu","∪"]], [["gus","—"],["Lā","—"]],
-      [["vīn","—"],["ia","∪"],["que","∪"]], [["vē","—"],["nit","—"]] ],
+    [ [["Ar","—"],["ma","∪",0],["vi","∪"]], [["rum","—",0],["que","∪",0],["ca","∪"]],
+      [["nō,","—",0],["Trō","—"]], [["iae","—",0],["quī","—"]],
+      [["prī","—"],["mus","∪",0],["ab","∪"]], [["ō","—"],["rīs","—",0]] ],
+    [ [["Ī","—"],["ta","∪",0],["li","∪",0]], [["am","—",0],["fā","—"]],
+      [["tō","—",0],["pro","∪"],["fu","∪",0]], [["gus","—",0],["Lā","—"]],
+      [["vīn","—",0],["ia","∪",0],["que","∪",0]], [["vē","—"],["nit","—",0]] ],
   ],
 });
 renderAllit(document.getElementById("allit-beowulf"), {
@@ -457,17 +457,17 @@ renderAllit(document.getElementById("allit-beowulf"), {
 renderScan(document.getElementById("scan-pope"), {
   attr: "Pope, An Essay on Criticism — iambic pentameter",
   lines: [
-    [ [["A","u"],["lit","S"]], [["tle","u"],["learn","S"]], [["ing","u"],["is","S"]],
-      [["a","u"],["dan","S"]], [["g’rous","u"],["thing","S"]] ],
+    [ [["A","u"],["lit","S"]], [["tle","u",0],["learn","S"]], [["ing","u",0],["is","S"]],
+      [["a","u"],["dan","S"]], [["g’rous","u",0],["thing;","S"]] ],
   ],
 });
 renderScan(document.getElementById("scan-fq"), {
   attr: "Spenser, Faerie Queene I.i — five feet, then six",
   lines: [
-    [ [["Y","u"],["cladd","S"]], [["in","u"],["migh","S"]], [["tie","u"],["armes","S"]],
-      [["and","u"],["sil","S"]], [["ver","u"],["shielde","S"]] ],
-    [ [["As","u"],["one","S"]], [["for","u"],["knight","S"]], [["ly","u"],["giusts","S"]],
-      [["and","u"],["fierce","S"]], [["en","u"],["coun","S"]], [["ters","u"],["fitt","S"]] ],
+    [ [["Y","u"],["cladd","S",0]], [["in","u"],["migh","S"]], [["tie","u",0],["armes","S"]],
+      [["and","u"],["sil","S"]], [["ver","u",0],["shielde,","S"]] ],
+    [ [["As","u"],["one","S"]], [["for","u"],["knight","S"]], [["ly","u",0],["giusts","S"]],
+      [["and","u"],["fierce","S"]], [["en","u"],["coun","S",0]], [["ters","u",0],["fitt.","S"]] ],
   ],
 });
 Array.prototype.forEach.call(document.querySelectorAll(".era > h2"), function(h){ h.addEventListener("click", function(){ h.parentElement.classList.toggle("open"); }); });

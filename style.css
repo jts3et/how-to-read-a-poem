@@ -140,10 +140,10 @@ body.present .participant-note{opacity:.5}
 .syl{display:inline-flex;flex-direction:column;align-items:center;cursor:pointer;
   padding:2px 2px;border-radius:6px;user-select:none}
 .syl:hover{background:var(--accent-soft)}
-.syl .mark{font-size:12px;height:16px;line-height:16px;color:var(--slack)}
-.syl.stress .mark{color:var(--stress);font-weight:700}
+.syl .mark{font-size:15px;height:16px;line-height:16px;color:var(--muted);font-weight:700}
+.syl.stress .mark{color:var(--stress)}
 .syl .txt{font-size:17px}
-.syl.stress .txt{font-weight:700}
+.syl.stress .txt{font-weight:700;color:var(--stress)}
 .syl.ok .mark{color:var(--ok)} .syl.ok{background:#eaf3ec}
 .syl.diff .mark{color:var(--warn)} .syl.diff{background:#f6efdc}
 .syl.flex{opacity:.55}
@@ -217,8 +217,10 @@ body.author textarea#keyout{display:block;width:100%;min-height:120px;font:0.8em
 .sfoot{display:flex;padding:0 9px;border-left:1px solid var(--line)}
 .sfoot:first-child{border-left:0;padding-left:0}
 .ssyl{display:flex;flex-direction:column;align-items:center;padding:0 3px}
-.sq{font-size:14px;color:var(--slack);height:18px;line-height:18px}
-.st{font-size:17px}
+.sq{font-size:14px;color:var(--muted);height:17px;line-height:17px;font-weight:700}
+.ssyl.on .sq{color:var(--accent)}
+.st{font-size:16px}
+.ssyl.on .st{color:var(--accent);font-weight:700}
 .sattr{font-size:13px;color:var(--muted);margin:6px 0 0}
 /* scansion shown parallel to the poem, styled like the translation module */
 .scanmod{flex:1 1 0;min-width:0;background:var(--panel);border:1px solid var(--line);
