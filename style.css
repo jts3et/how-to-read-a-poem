@@ -113,5 +113,42 @@ body.author textarea#keyout{display:block;width:100%;min-height:120px;font:0.8em
 .livedot{width:9px;height:9px;border-radius:50%;background:var(--ok);display:inline-block;margin-right:5px;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
+/* name-gate + watch links */
+.namegate{position:fixed;inset:0;background:rgba(34,32,25,.55);display:flex;
+  align-items:center;justify-content:center;z-index:20}
+.ngbox{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:24px 26px;max-width:340px;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.2)}
+.ngbox h2{margin:0 0 8px;font-size:20px}
+.ngbox p{font-size:14px;color:var(--muted)}
+.ngbox input{font:inherit;font-size:15px;padding:8px 10px;border:1px solid var(--line);
+  border-radius:8px;width:100%;margin:0 0 10px}
+.ngbox .btn{width:100%}
+.watch{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;padding:8px 13px;
+  border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--accent);text-decoration:none}
+.watch:hover{border-color:var(--accent)}
+.watch::before{content:"\25B6";font-size:10px}
+.scanned{white-space:pre-wrap;font:0.95em ui-monospace,Menlo,monospace;line-height:1.75;
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:0 0 12px;overflow-x:auto}
+.scanned b{color:var(--stress)}
+
+/* split-pane PDF reader */
+.pdfpane{position:fixed;right:0;bottom:0;width:45vw;background:#525659;
+  display:none;flex-direction:column;z-index:6;border-left:1px solid var(--line);
+  box-shadow:-6px 0 18px rgba(0,0,0,.12)}
+body.haspane .pdfpane{display:flex}
+.pdfpane .phead{display:flex;align-items:center;gap:6px;background:var(--panel);
+  border-bottom:1px solid var(--line);padding:6px 9px}
+.pdfpane .phead select{font:inherit;font-size:13px;padding:4px 7px;border:1px solid var(--line);border-radius:7px}
+.pdfpane .phead .btn{font-size:13px;padding:4px 9px}
+.pdfpane iframe{flex:1;border:0;width:100%;background:#525659}
+.presizer{position:fixed;bottom:0;width:9px;cursor:col-resize;z-index:7;
+  background:transparent;display:none}
+.presizer:hover{background:var(--accent-soft)}
+.wrap{transition:margin-right .12s ease}
+@media (max-width:820px){
+  .pdfpane{width:100vw} body.haspane .wrap{margin-right:0}
+}
+@media print{.pdfpane,.presizer{display:none!important}}
+
 @media print{.top{display:none} .pdfframe{height:60vh}}
 @media (max-width:640px){.wrap{padding:22px 16px 70px} .pdfframe{height:70vh}}
