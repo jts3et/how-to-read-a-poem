@@ -44,17 +44,19 @@ a{color:var(--accent);text-underline-offset:2px}
 .parallel .verse{flex:1 1 0;min-width:0;margin:0;font-size:14px;line-height:1.7}
 @media (max-width:640px){.parallel{flex-direction:column}}
 /* aligned parallel: line i of both columns share one grid row (paralign.js) */
-.palign{display:grid;grid-template-columns:1fr 1fr;column-gap:18px;align-items:start;
-  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;
-  box-shadow:var(--shadow);margin:0 0 12px}
+.palign{display:grid;grid-template-columns:1fr 1fr;column-gap:20px;align-items:start;
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 20px;
+  box-shadow:var(--shadow);margin:0 -95px 12px}
+@media (max-width:1080px){.palign{margin-left:0;margin-right:0}}
 .palign .pa-h{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);
   font-family:ui-monospace,Menlo,monospace;min-height:4px;margin:0 0 6px}
-.palign .pa-cell{font-size:14px;line-height:1.7;min-width:0}
+.palign .pa-cell{font-size:14px;line-height:1.55;min-width:0}
 .palign .pa-txt{padding-left:1.35em;text-indent:-1.35em}
 .palign .pa-el{overflow-x:auto}
 .palign .pa-acell{color:var(--muted);font-size:12.5px;margin-top:7px}
-.palign .al-line{font-size:13.5px}
-.palign .sline{font-size:13px}
+.palign .al-line{font-size:13px}
+.palign .sline{font-size:14px}
+.palign .sline .st{font-size:14px}
 @media (max-width:640px){.palign{grid-template-columns:1fr;row-gap:2px}.palign .pa-h:empty{display:none}}
 /* translations share the original's module styling; distinguished only by the label */
 .parallel .verse.trans .trlabel{color:var(--accent)}
@@ -192,8 +194,7 @@ body.present .participant-note{opacity:.5}
 .syl{display:inline-flex;flex-direction:column;align-items:center;cursor:pointer;
   padding:1px 2px;border-radius:6px;user-select:none}
 .syl:hover{background:var(--accent-soft)}
-.syl .mark{font-size:15px;height:15px;line-height:15px;color:var(--muted);font-weight:700}
-.syl.stress .mark{color:var(--stress)}
+.syl .mark{display:none}   /* stress shows by weight + colour; no mark row */
 .syl .txt{font-size:17px}
 .syl.stress .txt{font-weight:700;color:var(--stress)}
 .syl.ok .mark{color:var(--ok)} .syl.ok{background:#eaf3ec}

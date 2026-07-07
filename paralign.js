@@ -14,6 +14,9 @@
       return { rows: slice(el.querySelectorAll(".sline")),
                attr: slice(el.querySelectorAll(".sattr, .scannote")), label: lab && lab.textContent };
     }
+    if (el.classList.contains("poem"))   // rhyme-mapped poem: keep its badge+text lines and stanza gaps
+      return { rows: slice(el.children).filter(function (c) { return c.classList && (c.classList.contains("pline") || c.classList.contains("pgap")); }),
+               attr: slice(el.querySelectorAll(".pattr, .pmeta")) };
     // plain text .verse
     var label = el.querySelector(".trlabel");
     var clone = el.cloneNode(true); var cl = clone.querySelector(".trlabel"); if (cl) cl.remove();
@@ -39,14 +42,19 @@
   function align(p) {
     var kids = slice(p.children).filter(function (c) {
       return c.classList.contains("verse") || c.classList.contains("allit") ||
-             c.classList.contains("scanbox") || c.classList.contains("scanmod");
+             c.classList.contains("scanbox") || c.classList.contains("scanmod") ||
+             c.classList.contains("poem");
     });
     if (kids.length !== 2) return;
     var L = extract(kids[0]), R = extract(kids[1]);
     var g = mk("palign");
     g.appendChild(mk("pa-h", L.label || "")); g.appendChild(mk("pa-h", R.label || ""));
-    var n = Math.max(L.rows.length, R.rows.length);
-    for (var i = 0; i < n; i++) { g.appendChild(cell(L.rows[i])); g.appendChild(cell(R.rows[i])); }
+    var li = 0, ri = 0;                              // pair line-for-line; a stanza gap on the left gets an empty right cell
+    while (li < L.rows.length || ri < R.rows.length) {
+      var lrow = L.rows[li];
+      if (lrow && lrow.classList && lrow.classList.contains("pgap")) { g.appendChild(cell(lrow)); g.appendChild(cell(null)); li++; continue; }
+      g.appendChild(cell(lrow || null)); g.appendChild(cell(R.rows[ri] || null)); li++; ri++;
+    }
     g.appendChild(attrCell(L.attr)); g.appendChild(attrCell(R.attr));
     p.replaceWith(g);
   }

@@ -17,10 +17,10 @@
         foot.forEach(function (p) {
           var mark = p[1], next = flat[gi + 1];
           var strong = (mark === "S" || mark === "—");
-          var above = (mark === "S") ? "´" : (mark === "u") ? "" : mark; // ictus / blank / quantity symbol
-          var hyph = next && next[2] === 0;                                    // next syllable continues this word
+          var quant = (mark === "—" || mark === "∪");   // quantity keeps its symbol; stress shows by weight/colour only
+          var hyph = next && next[2] === 0;             // next syllable continues this word
           var sy = div("ssyl" + (strong ? " on" : ""));
-          sy.appendChild(div("sq", above));
+          if (quant) sy.appendChild(div("sq", mark));
           sy.appendChild(div("st", p[0] + (hyph ? HY : "")));
           ft.appendChild(sy); gi++;
         });

@@ -6,8 +6,7 @@
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
   function word(w) {
     var d = el("span", "al-w" + (w[1] ? " lift" : "") + (w[2] ? " stave" : ""));
-    d.appendChild(el("span", "beat", w[1] ? "ʹ" : ""));   // ʹ over each strong beat
-    d.appendChild(el("span", "wt", w[0]));
+    d.appendChild(el("span", "wt", w[0]));   // lifts show by weight, staves by colour — no mark row
     return d;
   }
   function half(arr) { var h = el("span", "al-half"); arr.forEach(function (w) { h.appendChild(word(w)); }); return h; }
