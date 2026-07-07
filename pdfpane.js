@@ -4,6 +4,7 @@
   var PDFS = {
     sweeney: { label: "Sweeney Agonistes", src: "./pdfs/sweeney-agonistes.pdf" },
     wasteland: { label: "The Waste Land", src: "./pdfs/the-waste-land.pdf" },
+    aistudy: { label: "AI-poetry study (Porter & Machery)", src: "./pdfs/ai-poetry-study.pdf" },
   };
   var WKEY = "htrap-pane-w", OKEY = "htrap-pane-open", CKEY = "htrap-pane-cur";
   var pane, frame, sel, resizer, curId = null;
