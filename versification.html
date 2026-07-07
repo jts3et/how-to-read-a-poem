@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Versification — How to Read a Poem</title>
-<link rel="stylesheet" href="./style.css?v=1783451634">
+<link rel="stylesheet" href="./style.css?v=1783454183">
 </head><body>
 <div class="top">
   <a class="brand" href="./index.html">How to Read a Poem</a>
@@ -214,19 +214,9 @@ When in eternal lines to time thou grow’st:
    So long lives this, and this gives life to thee.
 — Shakespeare, Sonnet 18 (Shakespearean)</div>
 
-<h3>Skeltonic verse</h3>
-<p>John Skelton runs the opposite way from the smooth pentameter — short two- and three-stress lines in a headlong tumble of rhyme, one sound held until it runs out.</p>
-<div class="poem" id="poem-skelton">For though my rhyme be ragged,
-Tattered and jagged,
-Rudely rain-beaten,
-Rusty and moth-eaten,
-If ye take well therewith,
-It hath in it some pith.
-— Skelton, <em>Colin Clout</em> (1522)</div>
-
 <h3>Blank verse and the Spenserian stanza</h3>
 <p>Surrey’s unrhymed pentameter — <b>blank verse</b> — becomes the line of drama, and Marlowe makes it speak. Spenser builds a long nine-line stanza for romance.</p>
-<div class="verse">Was this the face that launch’d a thousand ships,
+<div class="verse" id="poem-marlowe">Was this the face that launch’d a thousand ships,
 And burnt the topless towers of Ilium?
 Sweet Helen, make me immortal with a kiss.
 Her lips suck forth my soul: see, where it flies!
@@ -246,12 +236,6 @@ As much disdayning to the curbe to yield:
 Full jolly knight he seemd, and faire did sitt,
 As one for knightly giusts and fierce encounters fitt.
 — Spenser, <em>The Faerie Queene</em> I.i.1 (Spenserian stanza)</div>
-<div class="parallel">
-  <div class="verse">Ycladd in mightie armes and silver shielde,
-As one for knightly giusts and fierce encounters fitt.</div>
-  <div class="scanmod"><div class="trlabel">Scansion</div><div id="scan-fq"></div>
-  <p class="scannote">The second line runs five feet; the last stretches to six — the <b>alexandrine</b> that closes every stanza.</p></div>
-</div>
 
 </div>
 </div>
@@ -274,7 +258,7 @@ Take me to you, imprison me, for I,
 Except you enthrall me, never shall be free,
 Nor ever chaste, except you ravish me.
 — Donne, “Batter my heart, three-person’d God”</div>
-<div class="verse">Of Man’s first disobedience, and the fruit
+<div class="verse" id="poem-milton">Of Man’s first disobedience, and the fruit
 Of that forbidden tree whose mortal taste
 Brought death into the world, and all our woe,
 With loss of Eden, till one greater Man
@@ -303,11 +287,6 @@ Short views we take, nor see the lengths behind;
 But more advanced, behold with strange surprise
 New distant scenes of endless science rise!
 — Pope, <em>An Essay on Criticism</em></div>
-<div class="parallel">
-  <div class="verse">A little learning is a dangerous thing;</div>
-  <div class="scanmod"><div class="trlabel">Scansion</div><div id="scan-pope"></div>
-  <p class="scannote">Ten syllables, five iambs; the meter promotes the weak <em>is</em> to a beat — <em>be meek to the meter</em>.</p></div>
-</div>
 <div class="poem" id="poem-elegy">The curfew tolls the knell of parting day,
 The lowing herd wind slowly o’er the lea,
 The plowman homeward plods his weary way,
@@ -500,9 +479,9 @@ Petals on a wet, black bough.
 <p class="bnote">All primary texts are public domain and set in full; the Homer is quoted from Caroline Alexander’s copyrighted translation as a short classroom excerpt. Other translations are plain and literal, for construing only.</p>
 </div>
 </div>
-<script src="./scanview.js?v=1783451634"></script>
-<script src="./rhyme.js?v=1783451634"></script>
-<script src="./allit.js?v=1783451634"></script>
+<script src="./scanview.js?v=1783454183"></script>
+<script src="./rhyme.js?v=1783454183"></script>
+<script src="./allit.js?v=1783454183"></script>
 <script>
 renderScan(document.getElementById("scan-aeneid"), {
   attr: "Virgil, Aeneid 1.1–2 scanned — dactylic hexameter (— long, ∪ short)",
@@ -546,22 +525,6 @@ renderAllit(document.getElementById("allit-gawain"), {
   ],
   attr: "Sir Gawain and the Green Knight 13–14 (c. 1390)",
 });
-renderScan(document.getElementById("scan-pope"), {
-  attr: "Pope, An Essay on Criticism — iambic pentameter",
-  lines: [
-    [ [["A","u"],["lit","S"]], [["tle","u",0],["learn","S"]], [["ing","u",0],["is","S"]],
-      [["a","u"],["dan","S"]], [["g’rous","u",0],["thing;","S"]] ],
-  ],
-});
-renderScan(document.getElementById("scan-fq"), {
-  attr: "Spenser, Faerie Queene I.i — five feet, then six",
-  lines: [
-    [ [["Y","u"],["cladd","S",0]], [["in","u"],["migh","S"]], [["tie","u",0],["armes","S"]],
-      [["and","u"],["sil","S"]], [["ver","u",0],["shielde,","S"]] ],
-    [ [["As","u"],["one","S"]], [["for","u"],["knight","S"]], [["ly","u",0],["giusts","S"]],
-      [["and","u"],["fierce","S"]], [["en","u"],["coun","S",0]], [["ters","u",0],["fitt.","S"]] ],
-  ],
-});
 Array.prototype.forEach.call(document.querySelectorAll(".era > h2"), function(h){ h.addEventListener("click", function(){ h.parentElement.classList.toggle("open"); }); });
 Array.prototype.forEach.call(document.querySelectorAll(".verse.trans"), function(t){ var l=document.createElement("div"); l.className="trlabel"; l.textContent="English translation"; t.insertBefore(l, t.firstChild); });
 var M = mapRhyme;
@@ -580,11 +543,10 @@ M(document.getElementById("poem-cm"), { scheme:"ABCB DEFE", meta:"hymn stanza" }
 M(document.getElementById("poem-pet2"), { scheme:"ABBAABBA CDDECE", marks:{9:"volta"}, meta:"octave + sestet" });
 M(document.getElementById("poem-vill"), { scheme:"ABA ABA ABA ABA ABA ABAA", marks:{1:"refrain 1",3:"refrain 2",19:"refrain 2"}, meta:"19 lines, two refrains" });
 M(document.getElementById("poem-gawain"), { scheme:"ABABA", marks:{1:"bob",2:"wheel"}, meta:"bob + wheel · the stanza’s only rhyme" });
-M(document.getElementById("poem-skelton"), { scheme:"AABBCC", meta:"short lines, headlong rhyme" });
 M(document.getElementById("poem-windhover"), { scheme:"ABBAABBA", meta:"sprung rhythm · sonnet octave" });
 M(document.getElementById("poem-byzantium"), { scheme:"ABABABCC", meta:"ottava rima" });
 </script>
-<script src="./versescan.js?v=1783451634"></script>
+<script src="./versescan.js?v=1783454183"></script>
 <script>
 (window.VERSE_SCAN ? Object.keys(window.VERSE_SCAN) : []).forEach(function(id){
   var scan = window.VERSE_SCAN[id];
@@ -600,6 +562,6 @@ M(document.getElementById("poem-byzantium"), { scheme:"ABABABCC", meta:"ottava r
   renderScan(tgt, { lines: scan.lines });
 });
 </script>
-<script src="./paralign.js?v=1783451634"></script>
-<script src="./pdfpane.js?v=1783451634"></script>
+<script src="./paralign.js?v=1783454183"></script>
+<script src="./pdfpane.js?v=1783454183"></script>
 </body></html>
