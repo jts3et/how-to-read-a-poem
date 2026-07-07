@@ -230,6 +230,9 @@ body.author textarea#keyout{display:block;width:100%;min-height:120px;font:0.8em
 /* Old English alliterative line: beats, caesura, alliterating staves (allit.js) */
 .allit{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:12px;
   padding:16px 20px;margin:0 0 8px;box-shadow:var(--shadow);overflow-x:auto}
+.parallel .allit{flex:1 1 0;min-width:0;margin:0}
+.parallel .allit .al-line{font-size:13.5px}
+.parallel .allit .al-w .wt{font-size:13.5px}
 .al-line{display:flex;align-items:flex-end;white-space:nowrap;line-height:1.15;margin:0 0 11px;font-size:15px;width:max-content}
 .al-line:last-of-type{margin-bottom:0}
 .al-half{display:flex;align-items:flex-end}
