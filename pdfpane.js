@@ -36,7 +36,7 @@
   }
   function close() {
     document.body.classList.remove("haspane");
-    document.querySelector(".wrap").style.marginRight = "0";
+    document.querySelector(".wrap").style.marginRight = "";   // clear inline -> CSS margin:0 auto recenters
     frame.src = "about:blank";
     try { localStorage.setItem(OKEY, "0"); } catch (e) {}
   }
@@ -81,10 +81,9 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     build();
+    // auto-open only on the text pages (Sweeney / Waste Land); never persist across pages
     var want = document.body.getAttribute("data-pdf");
-    var wide = window.innerWidth > 820;
-    if (want && wide) open(want);                                   // auto-open on this page (desktop)
-    else if (localStorage.getItem(OKEY) === "1" && wide) open(localStorage.getItem(CKEY) || want || "sweeney");
+    if (want && window.innerWidth > 820) open(want);
   });
 
   window.HTRAPpane = { open: open, close: close };

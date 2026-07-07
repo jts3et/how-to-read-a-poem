@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The breath cycle — How to Read a Poem</title>
+<link rel="stylesheet" href="./style.css">
+</head><body>
+<div class="top">
+  <a class="brand" href="./index.html">How to Read a Poem</a>
+  <a class="btn" href="./sweeney.html">Sweeney</a>
+  <a class="btn" href="./versification.html">Versification</a>
+  <a class="btn" href="./scansion.html">Scansion</a>
+  <a class="btn active" href="./breath.html">Breath</a>
+  <a class="btn" href="./glossary.html">Glossary</a>
+  <a class="btn" href="./wasteland.html">The Waste Land</a>
+  <a class="btn" href="./board.html">Board</a>
+</div>
+<div class="wrap">
+<h1>The breath cycle</h1>
+<p class="lead">Why these feet and not others: the metrical foot is a phase of a single breath, and meter formalizes what the body already does.</p>
+
+<p>The Greeks named twenty-eight feet but built their traditions on only eleven repeating units. The difference is not arbitrary. Take the four two-syllable feet as the primitives, read each as a movement between the two levels of the voice — long and short — and each turns out to be one phase of a single oscillation. One breath.</p>
+
+<h2>Four feet, four phases</h2>
+<div class="tw"><table><thead><tr><th>Foot</th><th>Pattern</th><th>Movement</th><th>Phase of the breath</th></tr></thead><tbody>
+<tr><td>Trochee</td><td><code>— ∪</code></td><td>long → short</td><td><b>fall</b></td></tr>
+<tr><td>Pyrrhic</td><td><code>∪ ∪</code></td><td>short → short</td><td><b>dwell (low)</b></td></tr>
+<tr><td>Iamb</td><td><code>∪ —</code></td><td>short → long</td><td><b>rise</b></td></tr>
+<tr><td>Spondee</td><td><code>— —</code></td><td>long → long</td><td><b>dwell (high)</b></td></tr>
+</tbody></table></div>
+<p>In the order <b>fall → dwell-low → rise → dwell-high</b>, the four trace one complete oscillation: leave the long, pause at the short, return to the long, rest there. Then it can begin again.</p>
+
+<div class="scanbox" style="overflow-x:auto">
+<svg viewBox="0 0 640 180" width="100%" style="max-width:600px;display:block;margin:0 auto" role="img" aria-label="The breath cycle: fall, dwell low, rise, dwell high">
+  <text x="8" y="46" font-size="12" fill="#8b8579">long</text>
+  <text x="8" y="130" font-size="12" fill="#8b8579">short</text>
+  <line x1="70" y1="40" x2="600" y2="40" stroke="#e0ddd5"/>
+  <line x1="70" y1="124" x2="600" y2="124" stroke="#e0ddd5"/>
+  <polyline points="80,40 210,124 340,124 470,40 600,40" fill="none" stroke="#b8593f" stroke-width="3"/>
+  <circle cx="80" cy="40" r="4" fill="#b8593f"/><circle cx="210" cy="124" r="4" fill="#b8593f"/>
+  <circle cx="340" cy="124" r="4" fill="#b8593f"/><circle cx="470" cy="40" r="4" fill="#b8593f"/>
+  <circle cx="600" cy="40" r="4" fill="#b8593f"/>
+  <text x="145" y="160" font-size="12.5" fill="#3d3929" text-anchor="middle">fall</text>
+  <text x="275" y="160" font-size="12.5" fill="#3d3929" text-anchor="middle">dwell (low)</text>
+  <text x="405" y="160" font-size="12.5" fill="#3d3929" text-anchor="middle">rise</text>
+  <text x="535" y="160" font-size="12.5" fill="#3d3929" text-anchor="middle">dwell (high)</text>
+  <text x="145" y="30" font-size="11" fill="#8b8579" text-anchor="middle">trochee</text>
+  <text x="275" y="118" font-size="11" fill="#8b8579" text-anchor="middle">pyrrhic</text>
+  <text x="405" y="30" font-size="11" fill="#8b8579" text-anchor="middle">iamb</text>
+  <text x="535" y="30" font-size="11" fill="#8b8579" text-anchor="middle">spondee</text>
+</svg>
+</div>
+
+<h2>Building longer feet</h2>
+<p>Two moves make every longer foot. <b>Composition</b> joins two feet at a shared syllable (the tail of one is the head of the next, and they collapse into one). <b>Juxtaposition</b> simply sets two feet side by side, with a seam between them. Composing carries a single breath further along the cycle; juxtaposing places one breath beside the next.</p>
+
+<h2>The selection rule</h2>
+<p>The productive feet — the ones that actually founded metrical traditions — are exactly the <b>forward segments</b> of the cycle: a walk that starts at some phase and moves onward in order (fall → dwell-low → rise → dwell-high), skipping only the pauses. The unproductive feet run backward, or stall.</p>
+<div class="tw"><table><thead><tr><th>Trisyllabic foot</th><th>Pattern</th><th>Walk through the cycle</th><th></th></tr></thead><tbody>
+<tr><td>Dactyl</td><td><code>— ∪ ∪</code></td><td>fall → dwell-low</td><td class="pos">productive</td></tr>
+<tr><td>Anapest</td><td><code>∪ ∪ —</code></td><td>dwell-low → rise</td><td class="pos">productive</td></tr>
+<tr><td>Bacchius</td><td><code>∪ — —</code></td><td>rise → dwell-high</td><td class="pos">productive</td></tr>
+<tr><td>Cretic</td><td><code>— ∪ —</code></td><td>fall → rise (skip the pause)</td><td class="pos">productive</td></tr>
+<tr><td>Tribrach</td><td><code>∪ ∪ ∪</code></td><td>dwell → dwell</td><td class="neg">stalls</td></tr>
+<tr><td>Molossus</td><td><code>— — —</code></td><td>dwell → dwell</td><td class="neg">stalls</td></tr>
+<tr><td>Amphibrach</td><td><code>∪ — ∪</code></td><td>rise → fall</td><td class="neg">backward</td></tr>
+<tr><td>Antibacchius</td><td><code>— — ∪</code></td><td>dwell-high → fall</td><td class="neg">wraps around</td></tr>
+</tbody></table></div>
+<p>Four productive, four excluded, on one principle: forward motion through the breath. No corpus is consulted — the split falls out of the cycle itself. The long anchors the oscillation and can be either a boundary or a waypoint; the short only ever passes it along, which is why the amphibrach (short as <em>both</em> ends around a long) fails.</p>
+
+<h2>Rising, falling, hovering</h2>
+<p>Sorted by whether a foot’s first and last syllable match, the eleven productive metra fall into three families — and one cell stays empty at every level:</p>
+<div class="tw"><table><tbody>
+<tr><th>Rising</th><td>iambic, anapestic, ionic a minore, dochmiac — head short, tail long.</td></tr>
+<tr><th>Falling</th><td>trochaic, paeonic, ionic a majore — head long, tail short.</td></tr>
+<tr><th>Hovering</th><td>choriambic, cretic — head and tail both long; the breath returns where it left.</td></tr>
+</tbody></table></div>
+<p>The rising and falling metra build lines by juxtaposition alone: the mismatch between a unit’s end and the next unit’s beginning makes the pulse. The hovering metra (choriamb, cretic) close on the same note they open, so they leave no seam, and lines built from them need a launching foot and a landing foot to supply the articulation the hovering breath cannot. That framing requirement, and the freedom of the opening “base” of the Aeolic line, both follow from the two operations rather than being stipulated.</p>
+
+<h2>The limp</h2>
+<p>The <b>scazon</b>, or “limping” line, ends an iambic verse with a spondee instead of an iamb: the breath reaches the long but does not land, it stalls. The Greeks heard this as a physical defect, a verse that limps. A line can limp only against a proper gait, and the proper gait is forward motion through the cycle: departure, traversal, arrival. That the disruption was felt as bodily disfigurement, long before any theorist named the rule, is the evidence that the rule was respiratory before it was ever formal.</p>
+
+<h2>Closeness of texture</h2>
+<p>How much a passage moves through the cycle can be counted: the number of times the walk changes phase within a span of verse — its <b>phase-transition density</b>. Regular verse can hold one phase for line after line; dense verse shifts phase within a single foot. Recent work in embodied cognition supplies the mechanism. On Lisa Feldman Barrett’s account the brain constructs feeling from the error between the body’s predicted and actual interoceptive state, and Anil Seth’s interoceptive inference extends this to bodily states generally. Reciting verse with many phase transitions forces the breath and the articulators to reconfigure rapidly, generating a stream of prediction errors — the raw interoceptive material from which feeling is built. Denser texture, more transitions, more of the bodily signal that recitation turns into emotion. This is why a poem read aloud does something a poem read silently does not.</p>
+
+<div class="note"><b>Sources.</b> M. L. West, <em>Greek Metre</em>; Nigel Fabb &amp; Morris Halle, <em>Meter in Poetry</em>; Golston &amp; Riad, “The Phonology of Classical Greek Meter”; Lisa Feldman Barrett, <em>How Emotions Are Made</em>; Anil Seth, “Interoceptive Inference, Emotion, and the Embodied Self.” After J. Stec, “The Breath Cycle.”</div>
+</div>
+<script src="./pdfpane.js"></script>
+</body></html>

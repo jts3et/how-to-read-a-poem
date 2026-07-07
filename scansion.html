@@ -4,11 +4,11 @@
 <link rel="stylesheet" href="./style.css">
 </head><body>
 <div class="top">
-  <span class="brand">How to Read a Poem</span>
-  <a class="btn" href="./index.html">Overview</a>
+  <a class="brand" href="./index.html">How to Read a Poem</a>
   <a class="btn" href="./sweeney.html">Sweeney</a>
   <a class="btn" href="./versification.html">Versification</a>
   <a class="btn active" href="./scansion.html">Scansion</a>
+  <a class="btn" href="./breath.html">Breath</a>
   <a class="btn" href="./glossary.html">Glossary</a>
   <a class="btn" href="./wasteland.html">The Waste Land</a>
   <a class="btn" href="./board.html">Board</a>
@@ -35,22 +35,9 @@
 </ol>
 
 <h2>A whole sonnet, scanned</h2>
-<p>Capitals mark the stressed syllable; <code>|</code> divides the feet.</p>
-<div class="scanned">shall I | com-PARE | thee TO | a SUM- | mer’s DAY?
-thou ART | more LOVE- | ly AND | more TEM- | p’rate:
-ROUGH WINDS | do SHAKE | the DAR- | ling BUDS | of MAY,
-and SUM- | mer’s LEASE | hath ALL | too SHORT | a DATE;
-SOME-time | too HOT | the EYE | of HEAV- | en SHINES,
-and OF- | ten IS | his GOLD | com-PLEX- | ion DIMM’D;
-and EV- | ery FAIR | from FAIR | some-TIME | de-CLINES,
-by CHANCE | or NA- | ture’s CHANG- | ing COURSE | un-TRIMM’D;
-but THY | e-TER- | nal SUM- | mer SHALL | not FADE,
-nor LOSE | pos-SES- | sion OF | that FAIR | thou OW’ST;
-nor SHALL | death BRAG | thou WAN- | der’st IN | his SHADE,
-when IN | e-TER- | nal LINES | to TIME | thou GROW’ST:
-so LONG | as MEN | can BREATHE | or EYES | can SEE,
-so LONG | lives THIS | and THIS | gives LIFE | to THEE.</div>
-<p class="src">Iambic pentameter throughout, with a spondee opening line 3 (ROUGH WINDS) and a trochaic inversion opening line 5 (SOME-time); <em>temperate</em> and <em>every</em> elide to <em>temp’rate</em>, <em>ev’ry</em>.</p>
+<p>The marks are the same as the tool below — <b>u</b> slack, <b>S</b> stress, above each syllable; the feet divide by rule.</p>
+<div class="scanbox" id="scan-sonnet"></div>
+<p class="src">Iambic pentameter throughout, with a spondee opening line 3 (<em>rough winds</em>) and a trochaic inversion opening line 5 (<em>some-time</em>); <em>every</em> and <em>temperate</em> elide.</p>
 
 <h2>Scan for yourself</h2>
 <p>Click a syllable to toggle slack / stress; click the gaps to drop foot boundaries; name the meter. <b>Submit</b> lines go to the <a href="./board.html">board</a>; <b>Check</b> lines score against a model scansion.</p>
@@ -66,6 +53,26 @@ so LONG | lives THIS | and THIS | gives LIFE | to THEE.</div>
 
 <div class="note">Method after the <code>prosodic-scansion</code> skill: six feet, six steps, be meek to the meter.</div>
 </div>
+<script src="./scanview.js"></script>
+<script>
+var U="u",S="S";
+renderScan(document.getElementById("scan-sonnet"), { lines: [
+ [[["shall",U],["I",S]],[["com",U],["pare",S]],[["thee",U],["to",S]],[["a",U],["sum",S]],[["mer’s",U],["day",S]]],
+ [[["thou",U],["art",S]],[["more",U],["love",S]],[["ly",U],["and",S]],[["more",U],["tem",S]],[["per",U],["ate",S]]],
+ [[["rough",S],["winds",S]],[["do",U],["shake",S]],[["the",U],["dar",S]],[["ling",U],["buds",S]],[["of",U],["may",S]]],
+ [[["and",U],["sum",S]],[["mer’s",U],["lease",S]],[["hath",U],["all",S]],[["too",U],["short",S]],[["a",U],["date",S]]],
+ [[["some",S],["time",U]],[["too",U],["hot",S]],[["the",U],["eye",S]],[["of",U],["heav",S]],[["en",U],["shines",S]]],
+ [[["and",U],["of",S]],[["ten",U],["is",S]],[["his",U],["gold",S]],[["com",U],["plex",S]],[["ion",U],["dimm’d",S]]],
+ [[["and",U],["ev",S]],[["’ry",U],["fair",S]],[["from",U],["fair",S]],[["some",U],["time",S]],[["de",U],["clines",S]]],
+ [[["by",U],["chance",S]],[["or",U],["na",S]],[["ture’s",U],["chang",S]],[["ing",U],["course",S]],[["un",U],["trimm’d",S]]],
+ [[["but",U],["thy",S]],[["e",U],["ter",S]],[["nal",U],["sum",S]],[["mer",U],["shall",S]],[["not",U],["fade",S]]],
+ [[["nor",U],["lose",S]],[["pos",U],["ses",S]],[["sion",U],["of",S]],[["that",U],["fair",S]],[["thou",U],["ow’st",S]]],
+ [[["nor",U],["shall",S]],[["death",U],["brag",S]],[["thou",U],["wan",S]],[["der’st",U],["in",S]],[["his",U],["shade",S]]],
+ [[["when",U],["in",S]],[["e",U],["ter",S]],[["nal",U],["lines",S]],[["to",U],["time",S]],[["thou",U],["grow’st",S]]],
+ [[["so",U],["long",S]],[["as",U],["men",S]],[["can",U],["breathe",S]],[["or",U],["eyes",S]],[["can",U],["see",S]]],
+ [[["so",U],["long",S]],[["lives",U],["this",S]],[["and",U],["this",S]],[["gives",U],["life",S]],[["to",U],["thee",S]]],
+]});
+</script>
 <script src="./lines.js"></script>
 <script src="./scanpractice.js"></script>
 <script src="./pdfpane.js"></script>
