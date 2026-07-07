@@ -54,6 +54,53 @@ const WORKSHOP_POEMS = [
       { syl: ["And","no","birds","sing"], sp: [false,true,true,true] },
     ], answer: null,
   },
+  {
+    id: "hopkins-grandeur", poet: "Gerard Manley Hopkins", src: "God’s Grandeur (1918), 1–4", mode: "submit",
+    lines: [
+      { syl: ["The","world","is","charged","with","the","gran","deur","of","God"], sp: [false,true,true,true,true,true,true,false,true,true] },
+      { syl: ["It","will","flame","out","like","shi","ning","from","shook","foil"], sp: [false,true,true,true,true,true,false,true,true,true] },
+      { syl: ["It","ga","thers","to","a","great","ness","like","the","ooze","of","oil"], sp: [false,true,false,true,true,true,false,true,true,true,true,true] },
+      { syl: ["Crushed","Why","do","men","then","now","not","reck","his","rod"], sp: [false,true,true,true,true,true,true,true,true,true] },
+    ], answer: null,
+  },
+  {
+    id: "ebb-instrument", poet: "Elizabeth Barrett Browning", src: "A Musical Instrument (1860), st. 1", mode: "submit",
+    lines: [
+      { syl: ["What","was","he","do","ing","the","great","god","Pan"], sp: [false,true,true,true,false,true,true,true,true] },
+      { syl: ["Down","in","the","reeds","by","the","ri","ver"], sp: [false,true,true,true,true,true,true,false] },
+      { syl: ["Spread","ing","ru","in","and","scat","ter","ing","ban"], sp: [false,false,true,false,true,true,false,false,true] },
+      { syl: ["Splash","ing","and","pad","dling","with","hoofs","of","a","goat"], sp: [false,false,true,true,false,true,true,true,true,true] },
+      { syl: ["And","break","ing","the","gol","den","li","lies","a","float"], sp: [false,true,false,true,true,false,true,false,true,false] },
+      { syl: ["With","the","dra","gon","fly","on","the","ri","ver"], sp: [false,true,true,false,true,true,true,true,false] },
+    ], answer: null,
+  },
+  {
+    id: "spenser-amoretti", poet: "Edmund Spenser", src: "Amoretti 75 (1595), 1–4", mode: "submit",
+    lines: [
+      { syl: ["One","day","I","wrote","her","name","up","on","the","strand"], sp: [false,true,true,true,true,true,true,false,true,true] },
+      { syl: ["But","came","the","waves","and","wash","èd","it","a","way"], sp: [false,true,true,true,true,true,false,true,true,false] },
+      { syl: ["A","gain","I","wrote","it","with","a","se","cond","hand"], sp: [false,false,true,true,true,true,true,true,false,true] },
+      { syl: ["But","came","the","tide","and","made","my","pains","his","prey"], sp: [false,true,true,true,true,true,true,true,true,true] },
+    ], answer: null,
+  },
+  {
+    id: "shakespeare-henryv", poet: "Shakespeare", src: "Henry V III.i.1–4 (1599)", mode: "submit",
+    lines: [
+      { syl: ["Once","more","un","to","the","breach","dear","friends","once","more"], sp: [false,true,true,false,true,true,true,true,true,true] },
+      { syl: ["Or","close","the","wall","up","with","our","Eng","lish","dead"], sp: [false,true,true,true,true,true,true,true,false,true] },
+      { syl: ["In","peace","there’s","no","thing","so","be","comes","a","man"], sp: [false,true,true,true,false,true,true,false,true,true] },
+      { syl: ["As","mo","dest","still","ness","and","hu","mi","li","ty"], sp: [false,true,false,true,false,true,true,false,false,false] },
+    ], answer: null,
+  },
+  {
+    id: "shelley-ozymandias", poet: "Percy Bysshe Shelley", src: "Ozymandias (1818), 1–4", mode: "submit",
+    lines: [
+      { syl: ["I","met","a","tra","vel","ler","from","an","an","tique","land"], sp: [false,true,true,true,false,false,true,true,true,false,true] },
+      { syl: ["Who","said","Two","vast","and","trunk","less","legs","of","stone"], sp: [false,true,true,true,true,true,false,true,true,true] },
+      { syl: ["Stand","in","the","de","sert","Near","them","on","the","sand"], sp: [false,true,true,true,false,true,true,true,true,true] },
+      { syl: ["Half","sunk","a","shat","tered","vi","sage","lies","whose","frown"], sp: [false,true,true,true,false,true,false,true,true,true] },
+    ], answer: null,
+  },
 ];
 
 function meterString(foot, len) { return (!foot || !len) ? "" : FOOT_ADJ[foot] + " " + len; }

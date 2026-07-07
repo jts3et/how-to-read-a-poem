@@ -24,13 +24,27 @@ a{color:var(--accent);text-underline-offset:2px}
 .rline{flex:1;height:3px;border-radius:2px;background:var(--line)}
 .rlabel{font-size:11.5px;color:var(--accent);font-weight:600}
 .rmeta{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+/* rhyme scheme mapped onto the poem itself */
+.poem{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 46px;margin:0 0 8px;box-shadow:var(--shadow)}
+.rhyme-arcs{position:absolute;left:8px;top:0;overflow:visible;pointer-events:none}
+.pline{display:flex;align-items:center;gap:11px;line-height:1.55}
+.pline .rl{flex:0 0 auto;width:21px;height:21px;border-radius:5px;display:flex;align-items:center;
+  justify-content:center;font-size:11px;font-weight:700;color:#fff}
+.ptext{flex:1;font-size:16px}
+.plabel{flex:0 0 auto;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);font-weight:700}
+.pgap{height:9px}
+.pattr{color:var(--muted);font-size:14px;margin:6px 0 0;padding-left:32px}
+.pmeta{font-size:12px;color:var(--muted);margin:8px 0 0;padding-left:32px;text-transform:uppercase;letter-spacing:.04em}
 .formrow{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;margin:0 0 16px}
 .formrow .verse{flex:1 1 320px;margin:0}
 .formrow .rhyme{margin:0;flex:0 0 auto}
 @media (max-width:640px){.formrow .rhyme{width:100%;max-width:none}}
-.parallel{display:flex;gap:16px;flex-wrap:wrap;align-items:stretch;margin:0 0 10px}
-.parallel .verse{flex:1 1 260px;margin:0}
-.parallel .verse.trans{background:transparent;box-shadow:none;border-style:dashed;color:var(--muted);font-style:italic}
+.parallel{display:flex;gap:16px;align-items:stretch;margin:0 0 10px}
+.parallel .verse{flex:1 1 0;min-width:0;margin:0}
+@media (max-width:640px){.parallel{flex-direction:column}}
+.parallel .verse.trans{background:transparent;box-shadow:none;border-style:dashed;color:var(--muted)}
+.trlabel{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:block;margin:0 0 6px;font-family:ui-monospace,Menlo,monospace}
 .lookfor{font-size:14px;background:var(--accent-soft);border-left:3px solid var(--accent);
   border-radius:8px;padding:9px 13px;margin:0 0 18px}
 .lookfor b{color:var(--accent)}
@@ -50,9 +64,16 @@ html{scroll-behavior:smooth}
 .era{position:relative;padding-left:36px;margin:0 0 14px}
 .era::before{content:"";position:absolute;left:0;top:8px;width:16px;height:16px;border-radius:50%;
   background:var(--accent);border:3px solid var(--bg);box-shadow:0 0 0 1px var(--line);z-index:1}
-.era > h2{border:0;padding:0;margin:0;scroll-margin-top:66px}
+.era > h2{border:0;padding:0;margin:0;scroll-margin-top:66px;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:10px}
+.era > h2::after{content:"\203A";color:var(--accent);font-size:22px;line-height:1;flex:0 0 auto;
+  transition:transform .2s}
+.era:hover > h2::after,.era.open > h2::after{transform:rotate(90deg)}
 .era > .date{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;
-  color:var(--muted);margin:2px 0 12px}
+  color:var(--muted);margin:2px 0 0}
+.era-body{max-height:0;overflow:hidden;opacity:0;transition:opacity .2s ease}
+.era:hover > .era-body,.era.open > .era-body{max-height:none;overflow:visible;opacity:1;margin-top:12px}
+.era:hover,.era.open{padding-bottom:6px}
 .btn{font:inherit;font-size:13px;padding:6px 12px;border:1px solid transparent;
   border-radius:8px;background:transparent;color:var(--ink);text-decoration:none;cursor:pointer;
   transition:background .15s,border-color .15s}
