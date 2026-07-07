@@ -154,6 +154,28 @@ window.VERSE_SCAN = {
 [[["Bet","u"],["ter","S",0]],[["by","u"],["far","S"]],[["you","u"],["should","S"]],[["for","u"],["get","S",0]],[["and","u"],["smile","S"]]],
 [[["Than","u"],["that","S"]],[["you","u"],["should","S"]],[["re","u"],["mem","S",0]],[["ber","u",0],["and","S"]],[["be","u"],["sad.","S"]]]
 ]},
+"browning":{"lines":[
+[[["That’s","u"],["my","S"]],[["last","u"],["Duch","S"]],[["ess","u",0],["paint","S"]],[["ed","u",0],["on","S"]],[["the","u"],["wall,","S"]]],
+[[["Look","u"],["ing","S",0]],[["as","u"],["if","S"]],[["she","u"],["were","S"]],[["a","u"],["live.","S",0]],[["I","u"],["call","S"]]],
+[[["That","u"],["piece","S"]],[["a","u"],["won","S"]],[["der,","u",0],["now:","S"]],[["Frà","u"],["Pan","S"]],[["dolf’s","u",0],["hands","S"]]],
+[[["Worked","u"],["bus","S"]],[["i","u",0],["ly","S",0]],[["a","u"],["day,","S"]],[["and","u"],["there","S"]],[["she","u"],["stands.","S"]]],
+[[["Will’t","u"],["please","S"]],[["you","u"],["sit","S"]],[["and","u"],["look","S"]],[["at","u"],["her?","S"],["I","u"],["said","S"]]],
+[[["“Frà","u"],["Pan","S"]],[["dolf”","u",0],["by","S"]],[["de","u"],["sign,","S",0]],[["for","u"],["nev","S"]],[["er","u",0],["read","S"]]],
+[[["Stran","u"],["gers","S",0]],[["like","u"],["you","S"]],[["that","u"],["pic","S"]],[["tured","u",0],["coun","S"]],[["te","u",0],["nance,","S",0]]],
+[[["The","u"],["depth","S"]],[["and","u"],["pas","S"]],[["sion","u",0],["of","S"]],[["its","u"],["ear","S"]],[["nest","u",0],["glance,","S"]]],
+[[["But","u"],["to","S"],["my","u"],["self","S",0],["they","u"],["turned","S"],["(since","u"],["none","S"],["puts","u"],["by","S"]]],
+[[["The","u"],["cur","u"],["tain","u",0],["I","S"]],[["have","u"],["drawn","S"]],[["for","u"],["you,","S"]],[["but","u"],["I)…","S"]]]
+]},
+"cm":{"lines":[
+[[["Be","u"],["cause","S",0]],[["I","u"],["could","S"]],[["not","u"],["stop","S"]],[["for","u"],["Death –","S"]]],
+[[["He","u"],["kind","S"]],[["ly","u",0],["stopped","S"]],[["for","u"],["me –","S"]]],
+[[["The","u"],["Car","S"]],[["riage","u",0],["held","S"]],[["but","u"],["just","S"]],[["Our","u"],["selves –","S",0]]],
+[[["And","u"],["Im","S"]],[["mor","u",0],["tal","S",0]],[["i","u",0],["ty.","S",0]]],
+[[["We","u"],["slow","S"]],[["ly","u",0],["drove –","S"]],[["He","u"],["knew","S"]],[["no","u"],["haste","S"]]],
+[[["And","u"],["I","S"]],[["had","u"],["put","S"]],[["a","u"],["way","S",0]]],
+[[["My","u"],["la","S"]],[["bor","u",0],["and","S"]],[["my","u"],["lei","S"]],[["sure","u",0],["too,","S"]]],
+[[["For","u"],["His","S"]],[["Ci","u"],["vil","S",0]],[["i","u",0],["ty –","S",0]]]
+]},
 "vill":{"lines":[
 [[["They","u"],["are","S"],["all","u"],["gone","S"],["a","u"],["way,","S",0]]],
 [[["The","u"],["House","S"],["is","u"],["shut","S"],["and","u"],["still,","S"]]],
