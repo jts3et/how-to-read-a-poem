@@ -49,12 +49,13 @@
 </div>
 
 <h2>The full inventory of feet</h2>
-<p>Every ordered run of longs and shorts up to four syllables has a Greek name — 4 + 8 + 16 = 28 in all. Only a handful ever founded a metrical tradition; the rest are a combinatorial exercise.</p>
-<div class="tw"><table><thead><tr><th>Syllables</th><th>The feet (name · pattern)</th></tr></thead><tbody>
-<tr><th>2 — four</th><td><span class="pat">∪∪</span> pyrrhic · <span class="pat">∪—</span> iamb · <span class="pat">—∪</span> trochee · <span class="pat">——</span> spondee</td></tr>
-<tr><th>3 — eight</th><td><span class="pat">∪∪∪</span> tribrach · <span class="pat">∪∪—</span> anapest · <span class="pat">—∪∪</span> dactyl · <span class="pat">∪—∪</span> amphibrach · <span class="pat">∪——</span> bacchius · <span class="pat">——∪</span> antibacchius · <span class="pat">—∪—</span> cretic · <span class="pat">———</span> molossus</td></tr>
-<tr><th>4 — sixteen</th><td><span class="pat">—∪∪—</span> choriamb · <span class="pat">∪——∪</span> antispast · <span class="pat">∪∪——</span> ionic a minore · <span class="pat">——∪∪</span> ionic a majore · the four paeons (<span class="pat">—∪∪∪</span> …) · the four epitrites (<span class="pat">∪———</span> …) · <span class="pat">∪—∪—</span> diiamb · <span class="pat">—∪—∪</span> ditrochee · <span class="pat">∪∪∪∪</span> proceleusmatic · <span class="pat">————</span> dispondee</td></tr>
-</tbody></table></div>
+<p>Every ordered run of longs and shorts up to four syllables has a Greek name — 4 + 8 + 16 = 28 in all. Each foot is one walk between the two levels of the voice; only a handful ever founded a tradition (outlined in accent), and the rest stay a combinatorial exercise.</p>
+<div class="feetgroup">Two syllables — four feet</div>
+<div class="feetgrid" id="feet-2"></div>
+<div class="feetgroup">Three syllables — eight feet</div>
+<div class="feetgrid" id="feet-3"></div>
+<div class="feetgroup">Four syllables — sixteen feet</div>
+<div class="feetgrid" id="feet-4"></div>
 
 <h2>Building longer feet</h2>
 <p>Two moves make every longer foot. <b>Composition</b> joins two feet at a shared syllable (the tail of one is the head of the next, and they collapse into one). <b>Juxtaposition</b> simply sets two feet side by side, with a seam between them. Composing carries a single breath further along the cycle; juxtaposing places one breath beside the next.</p>
@@ -125,8 +126,51 @@
 
 <h2>Closeness of texture</h2>
 <p>How much a passage moves through the cycle can be counted: the number of times the walk changes phase within a span of verse — its <b>phase-transition density</b>. Regular verse can hold one phase for line after line; dense verse shifts phase within a single foot. Recent work in embodied cognition supplies the mechanism. On Lisa Feldman Barrett’s account the brain constructs feeling from the error between the body’s predicted and actual interoceptive state, and Anil Seth’s interoceptive inference extends this to bodily states generally. Reciting verse with many phase transitions forces the breath and the articulators to reconfigure rapidly, generating a stream of prediction errors — the raw interoceptive material from which feeling is built. Denser texture, more transitions, more of the bodily signal that recitation turns into emotion. This is why a poem read aloud does something a poem read silently does not.</p>
+<p>Two pentameter lines, five feet each — the first holds one phase the whole way, the second shifts three times. The walk above each shows the same thing as texture.</p>
+<div class="density" id="dens-shak"></div>
+<div class="density" id="dens-donne"></div>
 
-<div class="note"><b>Sources.</b> M. L. West, <em>Greek Metre</em>; Nigel Fabb &amp; Morris Halle, <em>Meter in Poetry</em>; Golston &amp; Riad, “The Phonology of Classical Greek Meter”; Lisa Feldman Barrett, <em>How Emotions Are Made</em>; Anil Seth, “Interoceptive Inference, Emotion, and the Embodied Self.” After J. Stec, “The Breath Cycle.”</div>
+<div class="bib">
+<div class="bhead">Sources</div>
+<p>Barrett, Lisa Feldman. <em>How Emotions Are Made: The Secret Life of the Brain</em>. Boston: Houghton Mifflin Harcourt, 2017.</p>
+<p>Fabb, Nigel, and Morris Halle. <em>Meter in Poetry: A New Theory</em>. Cambridge: Cambridge University Press, 2008.</p>
+<p>Golston, Chris, and Tomas Riad. “The Phonology of Classical Greek Meter.” <em>Linguistics</em> 38, no. 1 (2000): 99–167.</p>
+<p>Seth, Anil K. “Interoceptive Inference, Emotion, and the Embodied Self.” <em>Trends in Cognitive Sciences</em> 17, no. 11 (2013): 565–73.</p>
+<p>West, M. L. <em>Greek Metre</em>. Oxford: Clarendon Press, 1982.</p>
+<p class="bnote">After J. Stec, “The Breath Cycle” (in progress).</p>
 </div>
+</div>
+<script src="./feet.js"></script>
+<script>
+var FEET2=[{n:"pyrrhic",p:"∪∪"},{n:"iamb",p:"∪—"},{n:"trochee",p:"—∪"},{n:"spondee",p:"——"}];
+var FEET3=[{n:"tribrach",p:"∪∪∪"},{n:"anapest",p:"∪∪—",prod:1},{n:"dactyl",p:"—∪∪",prod:1},{n:"amphibrach",p:"∪—∪"},{n:"bacchius",p:"∪——",prod:1},{n:"antibacchius",p:"——∪"},{n:"cretic",p:"—∪—",prod:1},{n:"molossus",p:"———"}];
+var FEET4=[{n:"choriamb",p:"—∪∪—",prod:1},{n:"antispast",p:"∪——∪"},{n:"ionic a minore",p:"∪∪——",prod:1},{n:"ionic a majore",p:"——∪∪",prod:1},{n:"paeon I",p:"—∪∪∪",prod:1},{n:"paeon II",p:"∪—∪∪"},{n:"paeon III",p:"∪∪—∪"},{n:"paeon IV",p:"∪∪∪—"},{n:"epitrite I",p:"∪———"},{n:"epitrite II",p:"—∪——"},{n:"epitrite III",p:"——∪—"},{n:"epitrite IV",p:"———∪"},{n:"diiamb",p:"∪—∪—"},{n:"ditrochee",p:"—∪—∪"},{n:"proceleusmatic",p:"∪∪∪∪"},{n:"dispondee",p:"————"}];
+function fillFeet(id,arr){var g=document.getElementById(id);if(g)arr.forEach(function(f){g.appendChild(footCard(f));});}
+fillFeet("feet-2",FEET2);fillFeet("feet-3",FEET3);fillFeet("feet-4",FEET4);
+
+var PHN={rise:"rise",fall:"fall",dhigh:"dwell high",dlow:"dwell low"};
+function buildDensity(id,spec){
+  var node=document.getElementById(id); if(!node) return;
+  var t=document.createElement("div"); t.className="dline";
+  t.innerHTML=spec.line+' <span style="color:var(--muted);font-size:12px">— '+spec.attr+'</span>'; node.appendChild(t);
+  var ww=document.createElement("div"); ww.className="dwalkwrap";
+  ww.appendChild(footWalk(spec.feet.map(function(f){return f.p;}).join(""),{step:15})); node.appendChild(ww);
+  var row=document.createElement("div"); row.className="phases"; var shifts=0;
+  spec.feet.forEach(function(f,i){
+    var moved=i>0&&spec.feet[i-1].ph!==f.ph; if(moved)shifts++;
+    var c=document.createElement("div"); c.className="phchip ph-"+f.ph+(moved?" shift":"");
+    var pf=document.createElement("div");pf.className="pfoot";pf.textContent=f.p;c.appendChild(pf);
+    var pn=document.createElement("div");pn.className="pname";pn.textContent=PHN[f.ph];c.appendChild(pn);
+    row.appendChild(c);
+  });
+  node.appendChild(row);
+  var d=document.createElement("div");d.className="dcount";
+  d.innerHTML='phase transitions across the line — <b>'+shifts+'</b>';node.appendChild(d);
+}
+buildDensity("dens-shak",{line:"Shall I compare thee to a summer’s day?",attr:"Shakespeare, Sonnet 18",
+  feet:[{p:"∪—",ph:"rise"},{p:"∪—",ph:"rise"},{p:"∪—",ph:"rise"},{p:"∪—",ph:"rise"},{p:"∪—",ph:"rise"}]});
+buildDensity("dens-donne",{line:"Batter my heart, three-person’d God; for you",attr:"Donne, Holy Sonnet 14",
+  feet:[{p:"—∪",ph:"fall"},{p:"∪—",ph:"rise"},{p:"——",ph:"dhigh"},{p:"∪—",ph:"rise"},{p:"∪—",ph:"rise"}]});
+</script>
 <script src="./pdfpane.js"></script>
 </body></html>

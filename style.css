@@ -251,6 +251,36 @@ body.author textarea#keyout{display:block;width:100%;min-height:120px;font:0.8em
   text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 12px}
 .bib p{font-size:12.5px;color:var(--ink);padding-left:1.5em;text-indent:-1.5em;margin:0 0 8px;line-height:1.5}
 .bib p.bnote{padding:0;text-indent:0;color:var(--muted);margin-top:12px}
+/* metrical feet drawn as breath-walks (feet.js) */
+.walk{display:block}
+.walk .wg{stroke:var(--line);stroke-width:1}
+.walk .wl{fill:none;stroke:var(--accent);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.walk .wd{fill:var(--accent)}
+.feetgroup{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);margin:16px 0 8px}
+.feetgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:9px;margin:0 0 6px}
+.footcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:9px 11px;box-shadow:var(--shadow)}
+.footcard .fname{font-size:12px;color:var(--ink);margin-top:5px}
+.footcard .fpat{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--muted);letter-spacing:2px;margin-top:1px}
+.footcard.prod{border-color:var(--accent)}
+/* phase-transition density */
+.density{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;margin:0 0 14px;box-shadow:var(--shadow);overflow-x:auto}
+.density .dline{font-size:15px;margin:0 0 12px}
+.density .dwalkwrap{margin:0 0 10px}
+.phases{display:flex;flex-wrap:nowrap;gap:0;align-items:stretch;width:max-content}
+.phchip{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:6px 12px;border:1px solid var(--line);border-right:0;min-width:74px;font-size:11px;text-align:center}
+.phchip:last-child{border-right:1px solid var(--line);border-radius:0 8px 8px 0}
+.phchip:first-child{border-radius:8px 0 0 8px}
+.phchip .pfoot{font-family:ui-monospace,Menlo,monospace;font-size:13px;letter-spacing:2px}
+.phchip .pname{font-size:9.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-top:2px}
+.phchip.shift{border-left:2px solid var(--accent)}
+.ph-rise{background:#f2e2dc} .ph-fall{background:#f3ecd8}
+.ph-dlow{background:#e6edef} .ph-dhigh{background:#e7e3da}
+.dcount{font-size:12.5px;color:var(--muted);margin:10px 0 0}
+.dcount b{color:var(--accent);font-size:15px}
 
 /* split-pane PDF reader */
 .pdfpane{position:fixed;right:0;bottom:0;width:45vw;background:#525659;
