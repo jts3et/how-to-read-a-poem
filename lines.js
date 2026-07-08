@@ -85,7 +85,7 @@ const WORKSHOP_POEMS = [
     ], answer: null,
   },
   {
-    id: "spenser-amoretti", poet: "Edmund Spenser", src: "Amoretti 75 (1595)", mode: "submit",
+    id: "spenser-amoretti", poet: "Edmund Spenser", src: "Amoretti 75 (1595)", mode: "check",
     lines: [
       { syl: ["One","day","I","wrote","her","name","up","on","the","strand,"], sp: [false,true,true,true,true,true,true,false,true,true] },
       { syl: ["But","came","the","waves","and","wash","èd","it","a","way:"], sp: [false,true,true,true,true,true,false,true,true,false] },
@@ -101,19 +101,47 @@ const WORKSHOP_POEMS = [
       { syl: ["And","in","the","hea","vens","write","your","glo","rious","name:"], sp: [false,true,true,true,false,true,true,true,false,true] },
       { syl: ["Where","whe","nas","Death","shall","all","the","world","sub","due,"], sp: [false,true,false,true,true,true,true,true,true,false] },
       { syl: ["Our","love","shall","live,","and","la","ter","life","re","new.”"], sp: [false,true,true,true,true,true,false,true,true,false] },
-    ], answer: null,
+    ],
+    answer: {
+  lines: [
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSSuuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+  ],
+  meter: "iambic pentameter", form: "Spenserian stanza", notes: "Spenserian sonnet — the quatrains interlock (ababbcbccdcdee); regular iambic pentameter.",
+},
   },
   {
-    id: "shakespeare-henryv", poet: "Shakespeare", src: "Henry V III.i.1–4 (1599)", mode: "submit",
+    id: "shakespeare-henryv", poet: "Shakespeare", src: "Henry V III.i.1–4 (1599)", mode: "check",
     lines: [
       { syl: ["Once","more","un","to","the","breach,","dear","friends,","once","more;"], sp: [false,true,true,false,true,true,true,true,true,true] },
       { syl: ["Or","close","the","wall","up","with","our","Eng","lish","dead."], sp: [false,true,true,true,true,true,true,true,false,true] },
       { syl: ["In","peace","there’s","no","thing","so","be","comes","a","man"], sp: [false,true,true,true,false,true,true,false,true,true] },
       { syl: ["As","mo","dest","still","ness","and","hu","mi","li","ty:"], sp: [false,true,false,true,false,true,true,false,false,false] },
-    ], answer: null,
+    ],
+    answer: {
+  lines: [
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+  ],
+  meter: "iambic pentameter", form: "blank verse", notes: "Blank verse: unrhymed iambic pentameter (one reading — mark the spondaic Once more if you hear it).",
+},
   },
   {
-    id: "shelley-ozymandias", poet: "Percy Bysshe Shelley", src: "Ozymandias (1818)", mode: "submit",
+    id: "shelley-ozymandias", poet: "Percy Bysshe Shelley", src: "Ozymandias (1818)", mode: "check",
     lines: [
       { syl: ["I","met","a","tra","vel","ler","from","an","an","tique","land"], sp: [false,true,true,true,false,false,true,true,true,false,true] },
       { syl: ["Who","said:","“Two","vast","and","trunk","less","legs","of","stone"], sp: [false,true,true,true,true,true,false,true,true,true] },
@@ -129,7 +157,26 @@ const WORKSHOP_POEMS = [
       { syl: ["No","thing","be","side","re","mains.","Round","the","de","cay"], sp: [false,false,true,false,true,false,true,true,true,false] },
       { syl: ["Of","that","co","los","sal","Wreck,","bound","less","and","bare"], sp: [false,true,true,false,false,true,true,false,true,true] },
       { syl: ["The","lone","and","le","vel","sands","stretch","far","a","way.”"], sp: [false,true,true,true,false,true,true,true,true,false] },
-    ], answer: null,
+    ],
+    answer: {
+  lines: [
+    { stress: "uSuSuSuSuSu", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuSu", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+    { stress: "uSuSuSuSuS", feet: [2,4,6,8], flex: [] },
+  ],
+  meter: "iambic pentameter", form: "sonnet", notes: "A sonnet; iambic pentameter runs steady beneath the ruin (one reading — Half sunk, Look on may take substitutions).",
+},
   },
 ];
 
