@@ -32,8 +32,12 @@ a{color:var(--accent);text-underline-offset:2px}
 .pline .rl{flex:0 0 auto;width:21px;height:21px;border-radius:5px;display:flex;align-items:center;
   justify-content:center;font-size:11px;font-weight:700;color:#fff}
 .ptext{flex:1;font-size:16px;min-width:0}
-/* fitverse.js: a line too long to fit even at the type floor wraps with a hanging indent */
-.fit-wrap{padding-left:1.35em;text-indent:-1.35em}
+/* fitverse.js: a verse line never wraps; below the type floor its card scrolls sideways */
+.ptext,.pa-txt{white-space:nowrap}
+.poem.fit-scroll,.verse.fit-scroll,.palign.fit-scroll .pa-cell{overflow-x:auto}
+.verse.fit-scroll{white-space:pre}
+.poem.fit-scroll .pline{width:max-content;min-width:100%}
+.poem.fit-scroll .ptext{flex:0 0 auto}
 .pline.lab-below{flex-wrap:wrap;row-gap:0}
 .pline.lab-below .plabel{flex-basis:100%;padding-left:32px;margin-top:-2px}
 .plabel{flex:0 0 auto;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);font-weight:700}
@@ -62,6 +66,10 @@ a{color:var(--accent);text-underline-offset:2px}
 .palign .sline{font-size:14px}
 .palign .sline .st{font-size:14px}
 @media (max-width:640px){.palign{grid-template-columns:1fr;row-gap:2px}.palign .pa-h:empty{display:none}}
+/* fitverse.js: interlinear when a scansion column would be too small beside its poem */
+.palign.pa-stack{grid-template-columns:1fr;row-gap:2px}
+.palign.pa-stack .pa-h:empty{display:none}
+.palign.pa-stack .pa-el .sline,.palign.pa-stack .pa-el .al-line{margin-bottom:9px}
 /* translations share the original's module styling; distinguished only by the label */
 .parallel .verse.trans .trlabel{color:var(--accent)}
 .trlabel{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:block;margin:0 0 6px;font-family:ui-monospace,Menlo,monospace}
