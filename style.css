@@ -31,7 +31,11 @@ a{color:var(--accent);text-underline-offset:2px}
 .pline{display:flex;align-items:center;gap:11px;line-height:1.55}
 .pline .rl{flex:0 0 auto;width:21px;height:21px;border-radius:5px;display:flex;align-items:center;
   justify-content:center;font-size:11px;font-weight:700;color:#fff}
-.ptext{flex:1;font-size:16px}
+.ptext{flex:1;font-size:16px;min-width:0}
+/* fitverse.js: a line too long to fit even at the type floor wraps with a hanging indent */
+.fit-wrap{padding-left:1.35em;text-indent:-1.35em}
+.pline.lab-below{flex-wrap:wrap;row-gap:0}
+.pline.lab-below .plabel{flex-basis:100%;padding-left:32px;margin-top:-2px}
 .plabel{flex:0 0 auto;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);font-weight:700}
 .pgap{height:9px}
 .pattr{color:var(--muted);font-size:14px;margin:6px 0 0;padding-left:32px}

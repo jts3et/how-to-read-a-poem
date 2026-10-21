@@ -35,6 +35,7 @@
     }
     requestAnimationFrame(draw);
     window.addEventListener("resize", draw);
+    document.addEventListener("versefit", draw);
   }
 
   function mapRhyme(el, spec) {
